@@ -1,0 +1,41 @@
+1.1 Access the Git SCM and download the installation file
+    https://git-scm.com/
+
+2.1 Register and verify Git users
+
+2.1.1 User Registration
+git config --global user.name "name"
+git config --global user.email "user@email.com"
+
+2.2.2 Confirmation
+git config --list
+
+3.1 Basic Concepts and Terms
+Repository
+ - Repository (Repo): Space for storing content related to a project
+
+Branch
+- Independent workspace
+
+Four Areas of Git
+1) Working Directory
+ - Physical Project Directory
+ - All areas except .git where .git history and related information are stored
+ - The area where the actual code is added, modified, and deleted
+ 
+2) Repository
+ - Where files and folders are stored by change history
+ - It exists in the .git directory and is divided into two.
+ - Local Repository: Personal repository where files are stored on a personal PC
+ - Remote Repository: A repository that is managed by a dedicated remote repository server and can be shared with multiple people
+ 
+3) Index (Staging Area)
+ - Preparation area before storing information from Working Directory to Repository
+ - It is expressed as recording and staging the file status.
+ - It is managed as a .git/index file.
+ -git add : Information is stored in the Index area in the Working Directory.
+ -git commit: Information is stored as a repository in the Index area.
+ 
+ 4) Stash
+ - Separate temporary areas different from the above 3 areas
+ - You can save your work temporarily and take it out later.
