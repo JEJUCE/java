@@ -1,0 +1,7 @@
+1.1 github
+It is a web service that supports hosting a git storage.
+GitHub offers both commercial services and free services for open source.
+
+While git is a text command input method, GitHub provides a graphical user interface (GUI).
+
+Users must create accounts to contribute content to the site, but anyone can browse and download the public repository. With a registered user account, users can discuss, manage storage, submit contributions to other storage, and review changes to code.
