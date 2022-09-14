@@ -1,0 +1,11 @@
+ 1.1 How to get a intellij student license
+
+1)Access the JetBrains site
+
+2)Enter information
+- Enter information for authentication.
+ - Enter your school email account in Email address
+
+3)Confirmation of school email
+-Log in to the school email address you entered to check the authentication email.
+
