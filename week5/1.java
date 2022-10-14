@@ -2,7 +2,11 @@ import java.util.Scanner;
 import java.security.SecureRandom;
 import java.util.Arrays;
 
+<<<<<<< HEAD
 public class no1 { 
+=======
+public class 1 { 
+>>>>>>> issue#4
 	public static void main(String[] args) { 
 		Scanner sc = new Scanner(System.in);
 		int lotto[] = new int [6]; 
@@ -12,7 +16,11 @@ public class no1 {
 		int checker = 0; //일치하는 갯수	
 		int k=0;
 		
+<<<<<<< HEAD
 		for(int i=0; i<6;i++) {//숫자 입력받기 
+=======
+		for(int i=0; i<6;i++) {//숫자 입력받기
+>>>>>>> issue#4
 			number[i] = sc.nextInt();
 			for(int m=0;m<i;m++) {// 중복시 다시 입력
 				if(number[i] == number[m]) { 

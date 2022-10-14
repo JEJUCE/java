@@ -3,7 +3,11 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
+<<<<<<< HEAD
 public class no2{
+=======
+public class 2{ 
+>>>>>>> issue#4
 	public static void main(String[] args) { 
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Integer> lotto = new ArrayList<>(6);
