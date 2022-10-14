@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class 3 {
 	public static void main(String[] args) {
  
@@ -33,3 +34,4 @@ public class 3 {
  
  
 }
+

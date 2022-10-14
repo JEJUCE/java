@@ -3,24 +3,26 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
+
 public class 2{ 
+
 	public static void main(String[] args) { 
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Integer> lotto = new ArrayList<>(6);
 		ArrayList<Integer> number = new ArrayList<>(6);
 		ArrayList<Integer> right= new ArrayList<>(6);
 		SecureRandom randomNumbers = new SecureRandom();
-		int checker = 0; //ÀÏÄ¡ÇÏ´Â °¹¼ö	
+		int checker = 0; //ì¼ì¹˜í•˜ëŠ” ê°¯ìˆ˜	
 		int k=0;
 		
 		int lottotype = sc.nextInt();
 		
-		for(int i=0; i<lottotype;i++) {//¼ıÀÚ ÀÔ·Â¹Ş±â
+		for(int i=0; i<lottotype;i++) {//ìˆ«ì ì…ë ¥ë°›ê¸°
 			int num = sc.nextInt();
 			number.add(i, num);
-			for(int m=0;m<i;m++) {// Áßº¹½Ã ´Ù½Ã ÀÔ·Â
+			for(int m=0;m<i;m++) {// ì¤‘ë³µì‹œ ë‹¤ì‹œ ì…ë ¥
 				if(number.get(i) == number.get(m)){ 
-					System.out.print("¿À·ù! ´Ù½Ã ÀÔ·Â :");
+					System.out.print("ì˜¤ë¥˜! ë‹¤ì‹œ ì…ë ¥ :");
 					number.remove(i);
 					i--;
 					break;
@@ -31,14 +33,14 @@ public class 2{
 		}
 		
 		
-		/*System.out.print("»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ıÀÚ :");
+		/*System.out.print("ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ«ì :");
 		Collections.sort(number);
-		for(int i=0; i<lottotype;i++) { //ÀÔ·Â ¼ıÀÚ Ãâ·ÂÇÏ±â
+		for(int i=0; i<lottotype;i++) { //ì…ë ¥ ìˆ«ì ì¶œë ¥í•˜ê¸°
 			System.out.printf("%d"+" ", number.get(i));
 		}*/
 		Collections.sort(number);
 		
-		for(int i=0; i<lottotype; i++) { //·Î¶Ç ¹øÈ£ ¸¸µé±â
+		for(int i=0; i<lottotype; i++) { //ë¡œë˜ ë²ˆí˜¸ ë§Œë“¤ê¸°
 			int num = randomNumbers.nextInt(10)+1;
 			lotto.add(i,num);	
 			for(int j=0; j<i; j++) { 
@@ -50,12 +52,12 @@ public class 2{
 			} 
 		} 
 		Collections.sort(lotto);
-		System.out.print("\n»ı¼ºµÈ ·Î¶Ç ¼ıÀÚ:"); 
-		for(int i=0; i<lottotype; i++) {// ·Î¶Ç ¹øÈ£ Ãâ·Â
+		System.out.print("\nìƒì„±ëœ ë¡œë˜ ìˆ«ì:"); 
+		for(int i=0; i<lottotype; i++) {// ë¡œë˜ ë²ˆí˜¸ ì¶œë ¥
 			System.out.printf("%d"+" ",lotto.get(i));
 		}
 		
-		for(int v=0; v<lottotype;v++) { //´çÃ· È®ÀÎ
+		for(int v=0; v<lottotype;v++) { //ë‹¹ì²¨ í™•ì¸
 			for(int m=0;m<lottotype;m++) {
 				if(number.get(m) == lotto.get(v)) { 
 					checker++;
@@ -65,38 +67,11 @@ public class 2{
 				}
 			}
 		}
-		System.out.printf("\nÀÏÄ¡ÇÏ´Â ¼ıÀÚÀÇ °³¼ö : "+ "%d", checker);
-		System.out.print("\nÀÏÄ¡ÇÏ´Â ¼ıÀÚ : ");
+		System.out.printf("\nì¼ì¹˜í•˜ëŠ” ìˆ«ìì˜ ê°œìˆ˜ : "+ "%d", checker);
+		System.out.print("\nì¼ì¹˜í•˜ëŠ” ìˆ«ì : ");
 		
-		for(int i=0; i<k; i++) { // ÀÏÄ¡ÇÏ´Â ¼ıÀÚ Ãâ·Â
+		for(int i=0; i<k; i++) { // ì¼ì¹˜í•˜ëŠ” ìˆ«ì ì¶œë ¥
 			System.out.printf("%d"+" ",right.get(i)); 
 		} 
 		}
 	}
-	/*	
-		Arrays.sort(number);	
-		
-		
-		
-
-		Arrays.sort(lotto); 	
-		
-		
-		
-
-		for(int v=0; v<6;v++) { //´çÃ· È®ÀÎ
-			for(int m=0;m<6;m++) {
-				if(number[m] == lotto[v]) { 
-					checker++;
-					right[k]= lotto[v];
-					k++;
-				}
-			}
-		}
-		System.out.printf("\nÀÏÄ¡ÇÏ´Â ¼ıÀÚÀÇ °³¼ö : "+ "%d", checker);
-		System.out.print("\nÀÏÄ¡ÇÏ´Â ¼ıÀÚ : ");
-		for(int i=0; i<k; i++) { // ÀÏÄ¡ÇÏ´Â ¼ıÀÚ Ãâ·Â
-			System.out.print(right[i] + " "); 
-		} 
-	}	
-}	*/
