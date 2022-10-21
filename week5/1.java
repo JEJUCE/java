@@ -3,8 +3,8 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 
 
-public class 1 { 
 
+public class 1 {
 	public static void main(String[] args) { 
 		Scanner sc = new Scanner(System.in);
 		int lotto[] = new int [6]; 
@@ -13,9 +13,12 @@ public class 1 {
 		SecureRandom randomNumbers = new SecureRandom();
 		int checker = 0; //일치하는 갯수	
 		int k=0;
-		
+
+		for(int i=0; i<6;i++) {//���� �Է¹ޱ�
+
 
 		for(int i=0; i<6;i++) {//숫자 입력받기
+
 			number[i] = sc.nextInt();
 			for(int m=0;m<i;m++) {// 중복시 다시 입력
 				if(number[i] == number[m]) { 
