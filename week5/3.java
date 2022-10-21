@@ -1,5 +1,5 @@
 import java.util.Scanner;
-<<<<<<< HEAD
+
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -28,87 +28,4 @@ public class 3{
 				}
 				
 				
-			}
 		}
-		
-		
-		/*System.out.print("사용자가 입력한 숫자 :");
-		Collections.sort(number);
-		for(int i=0; i<lottotype;i++) { //입력 숫자 출력하기
-			System.out.printf("%d"+" ", number.get(i));
-		}*/
-		Collections.sort(number);
-		
-		for(int i=0; i<lottotype; i++) { //로또 번호 만들기
-			int num = randomNumbers.nextInt(10)+1;
-			lotto.add(i,num);	
-			for(int j=0; j<i; j++) { 
-				if(lotto.get(i) == lotto.get(j)) { 
-					lotto.remove(i);
-					i--;
-					break; 
-				} 
-			} 
-		} 
-		Collections.sort(lotto);
-		System.out.print("\n생성된 로또 숫자:"); 
-		for(int i=0; i<lottotype; i++) {// 로또 번호 출력
-			System.out.printf("%d"+" ",lotto.get(i));
-		}
-		
-		for(int v=0; v<lottotype;v++) { //당첨 확인
-			for(int m=0;m<lottotype;m++) {
-				if(number.get(m) == lotto.get(v)) { 
-					checker++;
-					int rightone = lotto.get(v);
-					right.add(k,rightone); 
-					k++;
-				}
-			}
-		}
-		System.out.printf("\n일치하는 숫자의 개수 : "+ "%d", checker);
-		System.out.print("\n일치하는 숫자 : ");
-		
-		for(int i=0; i<k; i++) { // 일치하는 숫자 출력
-			System.out.printf("%d"+" ",right.get(i)); 
-		} 
-		}
-	}
-	
-}
-=======
-public class 3 {
-	public static void main(String[] args) {
- 
-		Scanner in = new Scanner(System.in);
-		int N = in.nextInt();
-               
-		for(int i = 0; i <= N; i++) {
-			primechecking(i);
-		}
-    
-	}
-  
-	public static void primechecking(int number) {
-		if(number < 2) {
-			return;
-		}
-		
-		if(number == 2) {
-			System.out.println(number);
-			return;
-		}
-		
-        
-		for(int i = 2; i < number; i++) {
-			if(number % i == 0) {
-				return;
-			}
-		}
-		System.out.println(number);
-		return;
-	}
- 
- 
-}
->>>>>>> issue#4

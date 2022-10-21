@@ -2,42 +2,40 @@ import java.util.Scanner;
 import java.security.SecureRandom;
 import java.util.Arrays;
 
-<<<<<<< HEAD
-public class no1 { 
-=======
-public class 1 { 
->>>>>>> issue#4
+
+
+public class 1 {
 	public static void main(String[] args) { 
 		Scanner sc = new Scanner(System.in);
 		int lotto[] = new int [6]; 
 		int number[] = new int [6];
 		int right[]= new int [6];
 		SecureRandom randomNumbers = new SecureRandom();
-		int checker = 0; //ÀÏÄ¡ÇÏ´Â °¹¼ö	
+		int checker = 0; //ì¼ì¹˜í•˜ëŠ” ê°¯ìˆ˜	
 		int k=0;
-		
-<<<<<<< HEAD
-		for(int i=0; i<6;i++) {//¼ıÀÚ ÀÔ·Â¹Ş±â 
-=======
-		for(int i=0; i<6;i++) {//¼ıÀÚ ÀÔ·Â¹Ş±â
->>>>>>> issue#4
+
+		for(int i=0; i<6;i++) {//ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹Ş±ï¿½
+
+
+		for(int i=0; i<6;i++) {//ìˆ«ì ì…ë ¥ë°›ê¸°
+
 			number[i] = sc.nextInt();
-			for(int m=0;m<i;m++) {// Áßº¹½Ã ´Ù½Ã ÀÔ·Â
+			for(int m=0;m<i;m++) {// ì¤‘ë³µì‹œ ë‹¤ì‹œ ì…ë ¥
 				if(number[i] == number[m]) { 
-					System.out.print("¿À·ù! ´Ù½Ã ÀÔ·Â :");
+					System.out.print("ì˜¤ë¥˜! ë‹¤ì‹œ ì…ë ¥ :");
 					i--; 
 					break;
 				}
 				
 			}
 		}
-		System.out.print("»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ıÀÚ :");
+		System.out.print("ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ«ì :");
 		Arrays.sort(number);	
-		for(int i=0; i<6;i++) { //ÀÔ·Â ¼ıÀÚ Ãâ·ÂÇÏ±â
+		for(int i=0; i<6;i++) { //ì…ë ¥ ìˆ«ì ì¶œë ¥í•˜ê¸°
 			System.out.print(number[i]+" ");
 		}
 		
-		for(int i=0; i<6; i++) { //·Î¶Ç ¹øÈ£ ¸¸µé±â
+		for(int i=0; i<6; i++) { //ë¡œë˜ ë²ˆí˜¸ ë§Œë“¤ê¸°
 			lotto[i] = randomNumbers.nextInt(45)+1; 
 			
 			for(int j=0; j<i; j++) { 
@@ -49,13 +47,13 @@ public class 1 {
 		} 
 
 		Arrays.sort(lotto); 	
-		System.out.print("\n»ı¼ºµÈ ·Î¶Ç ¼ıÀÚ:"); 
+		System.out.print("\nìƒì„±ëœ ë¡œë˜ ìˆ«ì:"); 
 		
-		for(int i=0; i<6; i++) {// ·Î¶Ç ¹øÈ£ Ãâ·Â
+		for(int i=0; i<6; i++) {// ë¡œë˜ ë²ˆí˜¸ ì¶œë ¥
 			System.out.print(lotto[i]+" ");
 		}
 
-		for(int v=0; v<6;v++) { //´çÃ· È®ÀÎ
+		for(int v=0; v<6;v++) { //ë‹¹ì²¨ í™•ì¸
 			for(int m=0;m<6;m++) {
 				if(number[m] == lotto[v]) { 
 					checker++;
@@ -64,9 +62,9 @@ public class 1 {
 				}
 			}
 		}
-		System.out.printf("\nÀÏÄ¡ÇÏ´Â ¼ıÀÚÀÇ °³¼ö : "+ "%d", checker);
-		System.out.print("\nÀÏÄ¡ÇÏ´Â ¼ıÀÚ : ");
-		for(int i=0; i<k; i++) { // ÀÏÄ¡ÇÏ´Â ¼ıÀÚ Ãâ·Â
+		System.out.printf("\nì¼ì¹˜í•˜ëŠ” ìˆ«ìì˜ ê°œìˆ˜ : "+ "%d", checker);
+		System.out.print("\nì¼ì¹˜í•˜ëŠ” ìˆ«ì : ");
+		for(int i=0; i<k; i++) { // ì¼ì¹˜í•˜ëŠ” ìˆ«ì ì¶œë ¥
 			System.out.print(right[i] + " "); 
 		} 
 	}	
