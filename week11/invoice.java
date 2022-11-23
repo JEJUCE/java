@@ -3,12 +3,12 @@ public class invoice implements Payable {
 	private final String partDescription;
 	private final int quantity;
 	private final double pricePerItem;
-
+ 
 public invoice(String partNumber, String partDescription, int quantity, double pricePerItem){
 	if(quantity < 0){
 		throw new IllegalArgumentException("quantity must be >= 0");
 	}
-
+ 
 	if(pricePerItem < 0.0){
 		throw new IllegalArgumentException("Price per item must be >=0");
 	}

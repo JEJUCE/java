@@ -23,7 +23,7 @@ public abstract class Employee implements Payable {
 
 	public String getSocialSecurityNumber() {
 		return socialSecurityNumber;
-	}
+	} 
 	
 	@Override
 	public String toString() {
